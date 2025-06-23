@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "id": "1bae",
+      "title": "ysl",
+      "author": "sheiza",
+      "content": "this is my project",
+      "image": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+      "date": "2025-06-23T08:53:33.853Z"
+    },
+    {
+      "id": "c2fc",
+      "title": "terry",
+      "author": "sheiza",
+      "content": "this is my post",
+      "image": "https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg",
+      "date": "2025-06-23T11:50:37.376Z"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Pulse | Blog Manager</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Learning in public <span class="post-count" id="post-count">0 posts</span></h1>
+            <p>Modern blog post management</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div>
+            <div class="card">
+                <div class="card-header">
+                    Blog Posts
+                </div>
+                <div id="post-list" class="card-body">
+                    <div class="loader">
+                        <div class="spinner"></div>
+                        <p>Loading posts...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    Add New Post
+                </div>
+                <div class="card-body">
+                    <form id="new-post-form">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" required placeholder="Post title...">
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Author</label>
+                            <input type="text" id="author" name="author" required placeholder="Author name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image URL (optional)</label>
+                            <input type="text" id="image" name="image" placeholder="Image URL...">
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Content</label>
+                            <textarea id="content" name="content" required placeholder="Write your post content..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-plus"></i> Add Post
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <div class="card">
+                <div class="card-header" id="post-detail-header">
+                    Post Details
+                </div>
+                <div id="post-detail" class="card-body">
+                    <div class="empty-state">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>No Post Selected</h3>
+                        <p>Select a post from the list to view its details</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="edit-form-container" class="card hidden">
+                <div class="card-header">
+                    Update Post
+                </div>
+                <div class="card-body">
+                    <form id="edit-post-form">
+                        <input type="hidden" id="edit-id">
+                        <div class="form-group">
+                            <label for="edit-title">Title</label>
+                            <input type="text" id="edit-title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-content">Content</label>
+                            <textarea id="edit-content" name="content" required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Update Post
+                            </button>
+                            <button type="button" id="cancel-edit" class="btn btn-outline">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="notification" class="notification hidden"></div>
+<script src="index.js"></script>
+  
+</body>
+</html>
